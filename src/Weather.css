@@ -1,0 +1,63 @@
+h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 100px;
+  margin-top: 10px;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  color: white;
+  /* margin-bottom: 0;*/
+}
+hr {
+  height: 3px;
+  opacity: 1;
+  color: #fff;
+  background-color: #fff;
+  margin: 0;
+}
+.city {
+  font-family: "DynaPuff", cursive;
+  font-family: "Finger Paint", cursive;
+}
+.weather {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 1px solid #878787;
+  border-radius: 5px;
+  box-shadow: 4px 2px 2px #c1b9ae;
+  /*background-color: #ffffff;*/
+  background: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+.weather-forecast {
+  background: linear-gradient(90deg, #d7d2cc 0, #304352);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#humidity,
+#wind,
+#current-temperature {
+  font-size: 18px;
+  font-weight: 500;
+}
+.current-day {
+  font-size: 30px;
+  color: white;
+}
+.current-day-temperature {
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.min-temp {
+  color: #000;
+  opacity: 0.7;
+}
+.temperature-description {
+  color: white;
+}
