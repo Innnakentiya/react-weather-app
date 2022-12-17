@@ -16,6 +16,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
+      minTemp: response.data.main.temp_min,
+      maxTemp: response.data.main.temp_max,
     });
     setReady(true);
   }
@@ -65,8 +67,13 @@ export default function Weather(props) {
                     className="current-day-temperature"
                     id="temperature-input"
                   >
-                    <span className="min-temp">+15℃</span>
-                    <span className="max-temp"> ...+15℃</span>
+                    <span className="min-temp">
+                      {Math.round(weatherData.minTemp)}℃
+                    </span>
+                    <span className="max-temp">
+                      {" "}
+                      ... {Math.round(weatherData.maxTemp)}℃
+                    </span>
                   </div>
                 </div>
                 <div className="col-4">
