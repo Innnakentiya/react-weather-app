@@ -112,7 +112,6 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "1d69840c0c590c7b98248b4102610f33";
-    let city = "Madrid";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
