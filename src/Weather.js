@@ -4,6 +4,7 @@ import "./Weather.css";
 import ColWeatherForecast from "./ColWeatherForecast.js";
 import "./ColWeatherForecast.css";
 import image from "./images/sun.svg";
+import FormattedDate from "./FormattedDate.js";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -18,6 +19,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       minTemp: response.data.main.temp_min,
       maxTemp: response.data.main.temp_max,
+      date: new Date(response.data.dt * 1000),
     });
     setReady(true);
   }
@@ -62,7 +64,11 @@ export default function Weather(props) {
                   </div>
                 </div>
                 <div className="col-6">
-                  <div className="current-day">Today</div>
+                  <div className="current-day">
+                    <strong>
+                      Today <FormattedDate date={weatherData.date} />
+                    </strong>
+                  </div>
                   <div
                     className="current-day-temperature"
                     id="temperature-input"
