@@ -3,8 +3,9 @@ import axios from "axios";
 import "./Weather.css";
 import ColWeatherForecast from "./ColWeatherForecast.js";
 import "./ColWeatherForecast.css";
-import image from "./images/sun.svg";
-import FormattedDate from "./FormattedDate.js";
+//import image from "./images/sun.svg";
+//import FormattedDate from "./FormattedDate.js";
+import CurrentWeatherForecast from "./CurrentWeatherForecast";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -23,7 +24,6 @@ export default function Weather(props) {
     });
     setReady(true);
   }
-
   if (ready) {
     return (
       <div className="weather">
@@ -45,64 +45,7 @@ export default function Weather(props) {
           </h1>
         </div>
         <div className="weather-forecast">
-          <div className="current-weather-forecast">
-            <div className="CurrentWeatherValue">
-              <div className="row">
-                <div className="col-2 text-center">
-                  <img
-                    className="weather-icon-main"
-                    src={image}
-                    alt="Weather Icon"
-                    id="icon"
-                    width="90"
-                  />
-                  <div
-                    className="temperature-description text-capitalize"
-                    id="temperature-description"
-                  >
-                    {weatherData.description}
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="current-day">
-                    <strong>
-                      Today <FormattedDate date={weatherData.date} />
-                    </strong>
-                  </div>
-                  <div
-                    className="current-day-temperature"
-                    id="temperature-input"
-                  >
-                    <span className="min-temp">
-                      {Math.round(weatherData.minTemp)}℃
-                    </span>
-                    <span className="max-temp">
-                      {" "}
-                      ... {Math.round(weatherData.maxTemp)}℃
-                    </span>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <ul>
-                    <li>
-                      Current temperature :
-                      <span id="current-temperature">
-                        {Math.round(weatherData.temperature)}
-                      </span>
-                      ℃
-                    </li>
-                    <li>
-                      Humidity:{" "}
-                      <span id="humidity">{weatherData.humidity}</span>%
-                    </li>
-                    <li>
-                      Wind: <span id="wind">{weatherData.wind}</span>km/h
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CurrentWeatherForecast data={weatherData} />
           <hr />
           <div className="weatherForecast" id="forecast">
             <div className="row">
