@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 import "./Weather.css";
 import ColWeatherForecast from "./ColWeatherForecast.js";
 import "./ColWeatherForecast.css";
@@ -23,8 +24,7 @@ export default function Weather(props) {
       minTemp: response.data.main.temp_min,
       maxTemp: response.data.main.temp_max,
       date: new Date(response.data.dt * 1000),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      //icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
     setReady(true);
   }
