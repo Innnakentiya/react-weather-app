@@ -1,6 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
-import image from "./images/sun.svg";
+//import image from "./images/sun.svg";
 
 export default function CurrentWeatherForecast(props) {
   return (
@@ -10,8 +10,11 @@ export default function CurrentWeatherForecast(props) {
           <div className="col-2 text-center">
             <img
               className="weather-icon-main"
-              src={image}
-              alt="Weather Icon"
+              src={props.data.icon}
+              //src={image}
+              //icon={props.data.icon}
+              alt={props.data.description}
+              // alt="Weather Icon"
               id="icon"
               width="90"
             />
