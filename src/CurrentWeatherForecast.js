@@ -9,7 +9,7 @@ export default function CurrentWeatherForecast(props) {
       <div className="CurrentWeatherValue">
         <div className="row">
           <div className="col-2 text-center">
-            <WeatherIcon code={props.data.icon} />
+            <WeatherIcon code={props.data.icon} size={60} />
 
             <div
               className="temperature-description text-capitalize"
