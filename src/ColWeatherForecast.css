@@ -8,7 +8,38 @@
   font-weight: 500;
 }
 .min-temp {
-  /* color: #878787;*/
   color: black;
   opacity: 0.7;
+}
+@media (max-width: 770px) {
+  h1 {
+    text-align: center;
+  }
+  .Search {
+    text-align: center;
+  }
+
+  .col {
+    flex: none;
+    margin: 20px auto;
+  }
+  .date,
+  .temperature-description {
+    display: none;
+  }
+  .day {
+    margin-bottom: 10px;
+  }
+  .current-day-temperature,
+  .current-day {
+    font-size: 25px;
+    text-align: center;
+  }
+  .current-day {
+    margin-top: 20px;
+  }
+  ul {
+    text-align: center;
+    margin-top: 20px;
+  }
 }

@@ -1,14 +1,13 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon.js";
-//import image from "./images/sun.svg";
 
 export default function CurrentWeatherForecast(props) {
   return (
     <div className="current-weather-forecast">
       <div className="CurrentWeatherValue">
         <div className="row">
-          <div className="col-2 text-center">
+          <div className="col-md-2 text-center">
             <WeatherIcon code={props.data.icon} size={60} />
 
             <div
@@ -18,7 +17,7 @@ export default function CurrentWeatherForecast(props) {
               {props.data.description}
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-md-6">
             <div className="current-day">
               <strong>
                 Today <FormattedDate date={props.data.date} />
@@ -34,7 +33,7 @@ export default function CurrentWeatherForecast(props) {
               </span>
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <ul>
               <li>
                 Current temperature :
